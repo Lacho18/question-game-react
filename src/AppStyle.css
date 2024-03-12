@@ -1,0 +1,69 @@
+.main-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 80%;
+    border: 5px solid black;
+    border-radius: 12px;
+    background-image: linear-gradient(to right, #0066ff, #0000cc);
+}
+
+@media (max-width : 35em) {
+    .main-box {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.options-div {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 80%;
+    height: 30%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+}
+
+.single-option {
+    display: inline-block;
+    width: 9.75em;
+    height: 100%;
+    margin-left: 2%;
+}
+
+.single-option:hover {
+    border: 4px solid yellowgreen;
+}
+
+.single-option > p {
+    text-align: center;
+    font-size: 1.5vmax;
+}
+
+.single-option > button > img, .single-option > button {
+    width: 100%;
+    height: 100%;
+}
+
+.single-option > button {
+    border: none;
+}
+
+#selectTheme {
+    text-align: center;
+    font-size: 2.1vmax;
+    font-weight: bold;
+}
+
+@media (max-width: 35em) {
+    #selectTheme {
+        font-size: 4.5vmax;
+    }
+
+    .single-option > p {
+        font-size: 3.2vmax;
+    }
+}

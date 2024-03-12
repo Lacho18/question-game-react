@@ -1,0 +1,150 @@
+.question-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 7%;
+    color: rgb(202, 161, 108);
+}
+
+.answers-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.answers-buttons > button {
+    display: flex;
+    font-size: 1.25em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: #f6de7e;
+    margin: 3px;
+    border-radius: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 35em) {
+    .answers-buttons > button:hover {
+        background-color: #b89713;
+    }   
+}
+
+#questionCounter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 5px;
+    padding: 0;
+    font-size: 1.50em;
+    font-weight: bold;
+    color: rgb(23, 218, 150);
+}
+
+#imageOnQuestion {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20em;
+    margin: 3%;
+}
+
+.answers-input > * {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#textAnswerInput {
+    width: 80%;
+    padding: 3px;
+    font-size: 1.75em;
+}
+
+#submitTextAnswer {
+    text-align: center;
+    font-size: 2em;
+    background-color: #f6de7e;
+    border-radius: 12px;
+    width: 50%;
+    margin-top: 3%;
+}
+
+@media (max-width: 35em) {
+    .question-text {
+        font-size: 1.50em;
+    }
+
+    .answers-buttons {
+        display: inline;
+        overflow-y: scroll;
+        height: 50%;
+    }
+
+    .answers-buttons > button {
+        width: 100%;
+        margin-top: 5%;
+    }
+}
+
+/* Finish window styling */
+
+.finish-window {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.finish-window > p {
+    font-size: 2.5vmax;
+}
+
+.finish-buttons-div > p {
+    font-size: 2.1vmax;
+}
+
+.finish-window > p > span {
+    color: rgb(156, 88, 11);
+    font-size: 2.3vmax;
+    font-weight: bold;
+}
+
+.finish-buttons-div > button {
+    font-size: 1.7vmax;
+    padding: 1%;
+    margin: 2%;
+}
+
+@media (max-width: 35em) {
+    .finish-window > p {
+        font-size: 4.5vmax;
+    }
+    
+    .finish-buttons-div > p {
+        font-size: 3.8vmax;
+    }
+    
+    .finish-window > p > span {
+        color: rgb(156, 88, 11);
+        font-size: 5vmax;
+        font-weight: bold;
+    }
+    
+    .finish-buttons-div > button {
+        font-size: 3.5vmax;
+        padding: 1%;
+        margin: 2%;
+        width: 20%;
+    }
+}

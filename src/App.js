@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import './AppStyle.css';
+import QuestionStructure from './QuestionStructure';
+import data from './Data';
+import { useState } from 'react';
 
 function App() {
+  const [theme, setTheme] = useState({});
+
+  function SelectedOptionHandler(option) {
+    setTheme(data[option]);
+  }
+
+  function nullTheme() {
+    setTheme({});
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-box">
+      {theme.theme === undefined ?
+        <div>
+          <p id="selectTheme">Select a theme to start!</p>
+          <div className="options-div">
+            {data.map((indexValue, index) => {
+              return <div key={index} className="single-option">
+                <button onClick={() => { SelectedOptionHandler(index) }}>
+                  <img src={indexValue.imgOfTheme} />
+                </button>
+                <p>{indexValue.theme}</p>
+              </div>
+            })}
+          </div>
+        </div>
+        :
+        <QuestionStructure {...theme} nullTheme={nullTheme} />
+      }
     </div>
   );
 }
